@@ -29,3 +29,8 @@ func RandomInt(n int) (int, error) {
 	rand.Seed(time.Now().UnixNano())
 	return rand.Intn(n), nil
 }
+
+func RandomFloat() (float64, error) {
+	rand.Seed(time.Now().UnixNano())
+	return rand.Float64(), nil
+}
