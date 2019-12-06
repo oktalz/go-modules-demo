@@ -2,7 +2,7 @@ package demo
 
 import "math/rand"
 
-var chars = []rune("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
+var chars = []rune("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
 
 //RandomString returns random string of size n
 func RandomString(n int) string {
