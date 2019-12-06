@@ -9,9 +9,9 @@ import (
 var chars = []rune("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
 
 //RandomString returns random string of size n
-func RandomString(n int) (string, error) {
+func RandomStr(n int) (string, error) {
 	if n < 1 {
-		return "", fmt.Errorf("index must be positive")
+		return "", fmt.Errorf("index must be > 0")
 	}
 	rand.Seed(time.Now().UnixNano())
 	b := make([]rune, n)
@@ -20,4 +20,12 @@ func RandomString(n int) (string, error) {
 		b[i] = chars[rand.Intn(size)]
 	}
 	return string(b), nil
+}
+
+func RandomInt(n int) (int, error) {
+	if n < 1 {
+		return 0, fmt.Errorf("index must be > 0")
+	}
+	rand.Seed(time.Now().UnixNano())
+	return rand.Intn(n), nil
 }
