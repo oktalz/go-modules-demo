@@ -5,13 +5,6 @@ import (
 	"testing"
 )
 
-func TestZeroLength(t *testing.T) {
-	rnd := RandomString(0)
-	if len(rnd) != 0 {
-		t.Errorf(fmt.Sprintf("error: has len [%d] expects [%d]", len(rnd), 0))
-	}
-}
-
 func TestSplit(t *testing.T) {
 	tests := map[string]struct {
 		input  int
